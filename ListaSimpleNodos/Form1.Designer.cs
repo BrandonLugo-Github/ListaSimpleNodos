@@ -43,7 +43,7 @@ namespace ListaSimpleNodos
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCargar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnagregar
@@ -69,7 +69,7 @@ namespace ListaSimpleNodos
             // 
             // txtingresar
             // 
-            this.txtingresar.Location = new System.Drawing.Point(153, 37);
+            this.txtingresar.Location = new System.Drawing.Point(190, 37);
             this.txtingresar.Name = "txtingresar";
             this.txtingresar.Size = new System.Drawing.Size(147, 20);
             this.txtingresar.TabIndex = 2;
@@ -78,7 +78,7 @@ namespace ListaSimpleNodos
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(67, 39);
+            this.label1.Location = new System.Drawing.Point(104, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 20);
             this.label1.TabIndex = 3;
@@ -98,7 +98,7 @@ namespace ListaSimpleNodos
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft YaHei Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(67, 65);
+            this.label2.Location = new System.Drawing.Point(104, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 8;
@@ -106,7 +106,7 @@ namespace ListaSimpleNodos
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(153, 63);
+            this.txtNombre.Location = new System.Drawing.Point(190, 63);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(147, 20);
             this.txtNombre.TabIndex = 7;
@@ -115,7 +115,7 @@ namespace ListaSimpleNodos
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft YaHei Light", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(67, 96);
+            this.label3.Location = new System.Drawing.Point(104, 96);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 20);
             this.label3.TabIndex = 10;
@@ -123,7 +123,7 @@ namespace ListaSimpleNodos
             // 
             // txttelefono
             // 
-            this.txttelefono.Location = new System.Drawing.Point(153, 94);
+            this.txttelefono.Location = new System.Drawing.Point(190, 94);
             this.txttelefono.Name = "txttelefono";
             this.txttelefono.Size = new System.Drawing.Size(147, 20);
             this.txttelefono.TabIndex = 9;
@@ -147,7 +147,7 @@ namespace ListaSimpleNodos
             this.lstDato1.HideSelection = false;
             this.lstDato1.Location = new System.Drawing.Point(19, 196);
             this.lstDato1.Name = "lstDato1";
-            this.lstDato1.Size = new System.Drawing.Size(318, 97);
+            this.lstDato1.Size = new System.Drawing.Size(414, 97);
             this.lstDato1.TabIndex = 12;
             this.lstDato1.UseCompatibleStateImageBehavior = false;
             this.lstDato1.View = System.Windows.Forms.View.Details;
@@ -167,22 +167,22 @@ namespace ListaSimpleNodos
             this.columnHeader3.Text = "Telefono";
             this.columnHeader3.Width = 96;
             // 
-            // button1
+            // btnCargar
             // 
-            this.button1.Location = new System.Drawing.Point(340, 91);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(76, 47);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCargar.Location = new System.Drawing.Point(340, 132);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(76, 42);
+            this.btnCargar.TabIndex = 14;
+            this.btnCargar.Text = "Cargar Datos";
+            this.btnCargar.UseVisualStyleBackColor = true;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(622, 602);
-            this.Controls.Add(this.button1);
+            this.ClientSize = new System.Drawing.Size(445, 305);
+            this.Controls.Add(this.btnCargar);
             this.Controls.Add(this.lstDato1);
             this.Controls.Add(this.btnModifi);
             this.Controls.Add(this.label3);
@@ -217,7 +217,7 @@ namespace ListaSimpleNodos
         private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.ColumnHeader columnHeader2;
         private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCargar;
     }
 }
 

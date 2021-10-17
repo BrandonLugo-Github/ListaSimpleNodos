@@ -151,8 +151,8 @@ namespace ListaSimpleNodos
             {
                 return;
             }
-            nombreArchivo = "testListaCircular";
-            string path = @"C:\ListaCircular\" + nombreArchivo + ".txt";
+            nombreArchivo = "testListaSimple";
+            string path = @"C:\ListaSimple\" + nombreArchivo + ".txt";
             using (StreamWriter sw = File.CreateText(path))
             {
                 do
@@ -164,39 +164,42 @@ namespace ListaSimpleNodos
             }
             return;
         }
-        public void Cargar(string nombreArchivo)
+        public void Cargar()
         {
-            nombreArchivo = "testListaCircular";
-            string[] lineas = File.ReadAllLines(@"C:\ListaCircular\" + nombreArchivo + ".txt");
-            foreach (var linea in lineas)
+            string buscar = @"C:\ListaSimple\testListaSimple.txt";
+            if (File.Exists(buscar))
             {
-                if (linea.Length == 0)
+                string[] lineas = File.ReadAllLines(@"C:\ListaSimple\testListaSimple.txt");
+                foreach (var linea in lineas)
                 {
-                    continue;
+                    if (linea.Length == 0)
+                    {
+                        continue;
+                    }
+                    string[] datos = linea.Split('-');
+                    int numero = int.Parse(datos[0]);
+                    string nombre = datos[1];
+                    string telefono = datos[2];
+                    Nodo n = new Nodo(numero, nombre, telefono);
+                    Agregar(n);
                 }
-                string[] datos = linea.Split('-');
-                int numero = int.Parse(datos[0]);
-                string nombre = datos[1];
-                string telefono = datos[2];
-                Nodo n = new Nodo(numero, nombre, telefono);
-                ListView n = new ListView(numero, nombre, telefono);
-                Mostrar(n);
             }
+            return;
         }
-        //public override string ToString()
-        //{
-        //    string listaEnTexto = "";
-        //    Nodo h = head;
-        //    while (h != null)
-        //    {
-        //        listaEnTexto += h.ToString() + " ";
-        //        ListViewItem datos = new ListViewItem(Convert.ToString(h.numero));
-        //        datos.SubItems.Add(h.nombre);
-        //        datos.SubItems.Add(h.telefono);
-        //        h = h.Siguiente;
-        //    }
-        //    return listaEnTexto;
-        //}
+        public override string ToString()
+        {
+            string listaEnTexto = "";
+            Nodo h = head;
+            while (h != null)
+            {
+                listaEnTexto += h.ToString() + " ";
+                ListViewItem datos = new ListViewItem(Convert.ToString(h.numero));
+                datos.SubItems.Add(h.nombre);
+                datos.SubItems.Add(h.telefono);
+                h = h.Siguiente;
+            }
+            return listaEnTexto;
+        }
 
     }
 }

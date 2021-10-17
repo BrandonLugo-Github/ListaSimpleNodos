@@ -105,10 +105,12 @@ namespace ListaSimpleNodos
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+       
+
+        private void btnCargar_Click(object sender, EventArgs e)
         {
-            miLista.Cargar("testListaCircular");
-            
+            miLista.Cargar();
+            miLista.Mostrar(lstDato1);
         }
     }
 }
